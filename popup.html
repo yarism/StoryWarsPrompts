@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Prompts</title>
+    <style>
+      body {
+        font-family: Lato,Arial,sans-serif;
+        background-color: #FBFBFB;
+        font-size: 100%;
+        width: 205px;
+        margin: 0;
+      }
+      header {
+        background-color: white;
+        text-align: center;
+        border-bottom: 1px solid #E6E6E6;
+      }
+      h1 {
+        font-size: 24px;
+        color: #4C4D4D;
+        margin: 5px;
+      }
+      a {
+        color: #ff5a5f;
+        color: #4C4D4D;
+        font-size: 12px;
+      }
+      select {
+        height: 24px;
+        background-color: white;
+      }
+      .popupContainer {
+        float: left;
+        padding: 10px;
+      }
+      .container {
+        float: left;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .btn {
+        white-space: nowrap; 
+        background: #ff5a5f;
+        color: white;
+        font-size: 16px;
+        border-radius: 3px;
+        padding: 5px 0;
+        text-decoration: none;
+        width: 100%;
+        float: left;
+        text-align: center;
+        border: 1px solid #F04848;
+      }
+      .btn:hover {
+        cursor: pointer;
+        background: #F04848;
+      }
+      footer {
+        background-color: white;
+        text-align: center;
+        border-top: 1px solid #E6E6E6;
+        padding: 2px;
+        float: left;
+        width: 100%;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <!-- div id="status"></div -->
+    <header>
+      <h1>Prompts</h1>
+    </header>
+    <div class="popupContainer">
+      <!-- h1 style="text-align: center;">--- prompts ---</h1 -->
+      <div class="container">
+        <select id="category">
+          <option value="anything" selected="selected">Anything</option>
+          <option value="fan-fiction">Fan fiction</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="science-fiction">Science fiction</option>
+          <option value="romance">Romance</option>
+          <option value="horror">Horror</option>
+          <option value="adventure">Adventure</option>
+          <option value="humor">Humor</option>
+          <option value="historical-fiction">Historical fiction</option>
+          <option value="poetry">Poetry</option>
+          <option value="dystopia">Dystopia</option>
+          <option value="mystery">Mystery</option>
+          <option value="drama">Drama</option>
+          <option value="word-games">Word games</option>
+        </select>
+      </div>
+      <div class="container">
+        <button class="btn">Start writing</button>
+      </div>
+    </div>
+    <footer>
+      <a href="https://www.storywars.net" target="_blank">Powered by Story Wars</a>
+    </footer>
+
+  </body>
+</html>
+
