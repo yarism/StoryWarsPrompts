@@ -3,7 +3,7 @@
 
   "name": "Prompts by Story Wars",
   "description": "Find a writing prompt and start writing",
-  "version": "1.0.4",
+  "version": "1.0.5",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -14,6 +14,12 @@
       "48": "icon48.png",
       "128": "icon128.png" 
   },
+  "content_scripts": [
+    {
+      "matches": ["https://www.storywars.net/*"],
+      "js": ["content-script.js"]
+    }
+  ],
   "permissions": [
     "https://www.storywars.net/",
     "storage"
